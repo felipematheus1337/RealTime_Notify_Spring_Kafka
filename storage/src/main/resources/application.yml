@@ -1,0 +1,32 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: storage-ms
+  data:
+    mongodb:
+      connection:
+        pool:
+          size: 10
+          max-wait-time: 10000
+          max-connection-idle-time: 60000
+          max-connection-life-time=: 120000
+          maintenance-initial-delay: 0
+          maintenance-frequency: 15000
+      authentication-database: admin
+      ssl-enabled: true
+      read-preference: primaryPreferred
+      write-concern: majority
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:29092
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+

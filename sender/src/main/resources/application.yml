@@ -1,0 +1,20 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: sender-ms
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:29092
+    consumer:
+      bootstrap-servers: localhost:29092
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+
