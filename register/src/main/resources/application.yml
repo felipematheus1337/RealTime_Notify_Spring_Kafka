@@ -30,6 +30,12 @@ eureka:
 server:
   port: 0
 
+kafkatopics:
+  welcomeTopic: welcometopic
+
+kafkapartitions:
+  welcomePartition: welcomepartition
+
 
 
 
