@@ -1,6 +1,7 @@
 package com.request.request.model;
 
 
+import com.request.request.model.enums.NewsletterPreference;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,6 +25,9 @@ public class CompanyMessage {
     private String email;
 
     private String message;
+
+    @Enumerated(EnumType.STRING)
+    private NewsletterPreference preference;
 
     @Column(nullable = true)
     private Integer messagesReceived;

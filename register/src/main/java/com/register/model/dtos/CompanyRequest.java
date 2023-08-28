@@ -1,6 +1,7 @@
 package com.register.model.dtos;
 
 
+import com.register.model.NewsletterPreference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Transient;
 import lombok.*;
@@ -20,6 +21,8 @@ public class CompanyRequest {
     private String email;
 
     private String contactEmail;
+
+    private NewsletterPreference preference;
 
     private String phone;
 

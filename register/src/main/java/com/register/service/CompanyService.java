@@ -1,5 +1,7 @@
 package com.register.service;
 
+import com.register.model.NewsletterPreference;
+import com.register.model.dtos.CompanyMessage;
 import com.register.model.dtos.CompanyRequest;
 import com.register.model.dtos.CompanyResponse;
 
@@ -15,5 +17,11 @@ public interface CompanyService {
 
     List<CompanyResponse> getAll();
 
+    List<CompanyMessage> findCompaniesSubscribedToSportsLetters();
 
+    List<CompanyMessage> findCompaniesSubscribedToCryptoLetters();
+
+    List<CompanyMessage> findCompaniesSubscribedToFinancialLetters();
+
+    List<CompanyMessage> findCompaniesSubscribedToWorldLetters();
 }

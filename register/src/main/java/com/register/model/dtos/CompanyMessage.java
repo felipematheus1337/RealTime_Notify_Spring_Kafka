@@ -1,6 +1,7 @@
 package com.register.model.dtos;
 
 
+import com.register.model.NewsletterPreference;
 import lombok.*;
 
 @AllArgsConstructor
@@ -15,6 +16,8 @@ public class CompanyMessage {
     private String email;
 
     private String message;
+
+    private NewsletterPreference preference;
 
 
 }

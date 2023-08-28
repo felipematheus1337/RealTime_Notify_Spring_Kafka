@@ -35,6 +35,9 @@ public class Company implements Serializable {
     @Column(name = "phone")
     private String phone;
 
+    @Enumerated(EnumType.STRING)
+    private NewsletterPreference preference;
+
     @Transient
     private boolean hasContactEmail;
 
