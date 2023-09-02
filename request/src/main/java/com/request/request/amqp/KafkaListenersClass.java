@@ -46,7 +46,7 @@ public class KafkaListenersClass {
 
        var sendResponse = this.sendService.sendWelcomeMessage(company);
 
-        if (sendResponse.equals(null)) {
+        if (sendResponse == null) {
             ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR,"Send Response is null",
                     "Empty object.");
             log.info("Error ::: {}", apiError);
@@ -61,8 +61,6 @@ public class KafkaListenersClass {
         this.service.create(company);
 
         log.info("REQUEST FOR AN WELCOME EMAIL SUCESSFULLY.");
-
-
 
 
     }

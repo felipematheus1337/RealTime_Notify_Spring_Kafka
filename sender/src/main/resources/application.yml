@@ -4,7 +4,17 @@ server:
 spring:
   application:
     name: sender-ms
-
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kafkanotifyApp@gmail.com
+    password: kafkanotifyApp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   kafka:
     producer:
       bootstrap-servers: localhost:29092
